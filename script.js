@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
         jsonData.forEach(function (row) {
           // Formata todas as células da terceira coluna com duas casas decimais separadas por vírgula
           if (typeof row[2] === "number") {
-            row[2] = row[2].toFixed(2).replace(".", ",");
+            row[2] = row[2].toFixed(2).replace(",", ".");
           } else if (typeof row[2] === "string") {
-            row[2] = row[2].replace(".", ",");
+            row[2] = row[2].replace(",", ".");
           }
           // Garante que os dados da primeira coluna contenham 000000 dígitos
           row[0] = ("000000" + row[0]).slice(-6);
